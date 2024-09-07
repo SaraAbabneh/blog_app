@@ -1,0 +1,57 @@
+# Laravel Project Setup
+
+## Prerequisites
+Make sure you have the following installed:
+- PHP >= 8.0
+- Composer
+- MySQL (or another database system)
+- Node.js & npm (for frontend assets)
+DB_DATABASE name= blog_app
+
+## Step 1: Clone the repository
+```bash
+git clone https://github.com/your-repo/project.git
+cd project
+
+composer install
+npm install
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+php artisan db:seed --class=UsersSeeder    
+>> php artisan db:seed --class=PostsSeeder
+>> php artisan db:seed --class=CommentsSeeder
+>> php artisan db:seed --class=RepliesSeeder
+npm run dev
+
+
+
+User 
+      User Info
+'name' => UserTest
+'username' => User@123
+'email' => UserTest123@gmail.com
+'password' => User@123
+
+log in URL
+http://localhost:8080/blog-app/user/login
+		
+Register URL
+http://localhost:8080/blog-app/user/signup
+
+Admin 
+	Admin info
+'username' => admin
+'name' => admin
+'email' => admin123@gmail.com
+'password' => Admin@123
+
+
+
+log in URL
+http://localhost:8080/blog-app/admin/login
+
+
+
+
+
